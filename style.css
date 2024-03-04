@@ -1,0 +1,309 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3e3c3c;
+    color: #F9E897;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3E3C3C;
+    padding: 3vh;
+    margin: 0;
+    height: 2vh;
+}
+
+nav h1 {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F9E897;
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #A67F78;
+    padding: 1.5vh;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video stays behind other content */
+}
+
+#video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.content {
+    position: absolute;
+    top: 110%;
+    margin-left: 5%;
+    text-align: left;
+    width: 90%;
+}
+
+.content h2 {
+    font-size: 5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content p {
+    font-size: 1.5vh;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+}
+
+.content button {
+    padding: 1.5vh 3vh;
+    font-size: 1.5vh;
+    margin-top: 2vh;
+    background-color: #3E3C3C;
+    color: #F9E897;
+    border: 1px solid #F9E897;
+    border-radius: 35px;
+    cursor: pointer;
+    position: relative;
+    left: 150vh;
+    top: -2.5vh;
+}
+ 
+.content button a {
+    text-decoration: none;
+    color: #F9E897;
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+    margin-left: 120px;
+}
+
+.container > div{
+    flex: 0 0 350px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    box-shadow: 1px 1px 15px #A67F78;
+}
+
+.container > div:nth-of-type(1){
+    background: url(./assets/Agra.jpg) no-repeat 50%/cover;
+}
+
+.container > div:nth-of-type(4){
+    background: url(./assets/Ladakh.jpg) no-repeat 50%/cover;
+}
+
+.container > div:nth-of-type(2){
+    background: url(./assets/varanasi.jpg) no-repeat 50%/cover;
+}
+
+.container > div:nth-of-type(3){
+    background: url(./assets/Mysore-Palace.jpg) no-repeat 50%/cover;
+}
+
+.container > div .card-content{
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0; 
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: #02022e;
+    background: linear-gradient(0deg, rgba(2, 2, 46, 0.67550) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+}
+
+.container > div .card-content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: #F9E897;
+}
+
+.container > div:hover{
+    flex: 0 0 370px;
+    box-shadow: 1px 3px 15px #F9E897;
+    transform: translateY(-10px);
+}
+
+.container > div:hover .card-content{
+    opacity: 1;
+    transform: translateY(-30px);
+    visibility: visible;
+}
+
+.container > div h2{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: #F9E897;
+}
+
+.container > div p{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.video-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.video-content h2{
+    font-size: 7vh;
+    margin: 0;
+    padding: 0;
+}
+
+.video-content p{
+    font-size: 2vh;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+}
+
+.video-container .cards{
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cards > div {
+    flex: 0 0 250px;
+    height: 250px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px #A67F78;
+    background: #02022e;
+    margin-right: 20px;
+    background: linear-gradient(0deg, rgba(2, 2, 46, 0.67550) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cards > div:nth-of-type(1){
+    background: url(./assets/Agra.jpg) no-repeat 50%/cover;
+}
+
+.cards > div:nth-of-type(2){
+    background: url(./assets/Ladakh.jpg) no-repeat 50%/cover;
+}
+
+.cards > div:nth-of-type(4){
+    background: url(./assets/Mysore-Palace.jpg) no-repeat 50%/cover;
+}
+
+.cards > div:nth-of-type(3){
+    background: url(./assets/varanasi.jpg) no-repeat 50%/cover;
+}
+
+.cards > div::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(2, 2, 46, 0.67550) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    top: -2vh;
+    position: relative;
+}
+
+.buttons{
+    position: absolute;
+    top: 100%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 100000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.buttons button{
+    padding: 1.5vh 3vh;
+    font-size: 1.5vh;
+    margin-top: 2vh;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #F9E897;
+    border: 1px solid #F9E897;
+    border-radius: 35px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 100000;    
+}
+
+.buttons button a{
+    text-decoration: none;
+    color: #F9E897;
+}
+
+.buttons button:hover{
+    background-color: #A67F78;
+    padding: 1.5vh;
+}
+
+.video-container{
+    transition: all 0.5s ease 0s;
+}
